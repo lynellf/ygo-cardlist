@@ -1,0 +1,36 @@
+{
+  "name": "ygo-cardlist",
+  "version": "1.0.0",
+  "description": "List of converted cdb files for consumption in other apps",
+  "main": "main.js",
+  "scripts": {
+    "build": "rescript",
+    "clean": "rescript clean -with-deps",
+    "start": "rescript build -w",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lynellf/ygo-cardlist.git"
+  },
+  "keywords": [],
+  "author": "Ezell Frazier",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lynellf/ygo-cardlist/issues"
+  },
+  "homepage": "https://github.com/lynellf/ygo-cardlist#readme",
+  "dependencies": {
+    "@ryyppy/rescript-promise": "^2.1.0",
+    "cdb-formatter": "^1.2.1",
+    "cdb-to-json": "^1.0.3",
+    "rescript": "^9.1.4"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.15.5",
+    "@babel/preset-env": "^7.15.6",
+    "@types/jest": "^27.0.2",
+    "babel-jest": "^27.2.1",
+    "jest": "^27.2.1"
+  }
+}
