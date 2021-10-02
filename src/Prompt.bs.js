@@ -11,11 +11,11 @@ function ask(query) {
   return new Promise((function (resolve, _reject) {
                 readline.on("SIGINT", (function () {
                         readline.close();
-                        return resolve("");
+                        return resolve([]);
                       }));
                 return readline.question(query, (function (response) {
                               readline.close();
-                              return resolve(response);
+                              return resolve(response.split("/"));
                             }));
               }));
 }

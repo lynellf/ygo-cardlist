@@ -17,12 +17,12 @@ let ask = (query) => {
   Promise.make((resolve, _reject) => {
     readline.on(. "SIGINT", (.) => {
       readline.close(.)
-      resolve(. "")
+      resolve(. [])
     })
 
     readline.question(. query, (. response) => {
       readline.close(.)
-      resolve(. response)
+      resolve(. Js.String.split("/", response))
     })
   })
 }

@@ -1,17 +1,32 @@
 open Promise
 
-let getDirectoriesFromUser = (dispatch) => {
+let getDirectoriesFromUser = () => {
   Prompt.ask("Provide a directory path. Press Ctrl + C to exit. \n")
     ->then(msg => {
-      dispatch(msg)
       resolve(msg)
   })
 }
 
-let rec main = (state) => {
-  let { state } = State.context(state)
-  let isDone = state.contents === State.Done
-  isDone ? () : main(state.contents)
+let fromConfig = () => {
+  let configJson = Config.readConfig()
+  let config = Config.jsonToConfig(configJson)
+  let paths = config["paths"]
+  CardParser.parseCards(paths)
+  CardFormatter.formatCards()
 }
 
-main(State.Init)
+let fromInput = () => {
+  let action = getDirectoriesFromUser()->then((paths) => {
+    CardParser.parseCards(paths)
+    CardFormatter.formatCards()
+  })
+
+  Js.log(action)
+}
+
+let main = () => {
+  let hasConfig = Config.checkForConfig()
+  hasConfig ? fromConfig() : fromInput()
+}
+
+main()
