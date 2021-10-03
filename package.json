@@ -4,7 +4,7 @@
   "description": "List of converted cdb files for consumption in other apps",
   "main": "main.js",
   "scripts": {
-    "build": "rescript",
+    "build": "npm install && rescript && node app",
     "clean": "rescript clean -with-deps",
     "start": "rescript build -w",
     "test": "jest"
@@ -23,7 +23,7 @@
   "dependencies": {
     "@glennsl/bs-json": "^5.0.4",
     "@ryyppy/rescript-promise": "^2.1.0",
-    "cdb-formatter": "^1.2.1",
+    "cdb-formatter": "^1.3.1",
     "cdb-to-json": "^1.0.3",
     "rescript": "^9.1.4"
   },

@@ -23,7 +23,8 @@ function fromConfig(param) {
 function fromInput(param) {
   var action = getDirectoriesFromUser(undefined).then(function (paths) {
         CardParser.parseCards(paths);
-        return CardFormatter.formatCards(undefined);
+        CardFormatter.formatCards(undefined);
+        return Promise.resolve(undefined);
       });
   console.log(action);
   

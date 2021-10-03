@@ -1,8 +1,6 @@
-type config = {
-  "paths": array<string>
-}
+type config = {"paths": array<string>}
 
-let jsonToConfig = (json) => JSON.check(json)->JSON.parse
+let jsonToConfig = json => Parser.check(json)->Parser.parse
 
 let readConfig = () => Filesystem.readFileSync("./config.json")
 

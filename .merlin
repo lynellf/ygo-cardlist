@@ -1,12 +1,12 @@
 ####{BSB GENERATED: NO EDIT
-FLG -ppx '/workspace/ygo-cardlist/node_modules/rescript/linux/bsc.exe -as-ppx '
-S /workspace/ygo-cardlist/node_modules/rescript/lib/ocaml
-B /workspace/ygo-cardlist/node_modules/rescript/lib/ocaml
+FLG -ppx '/Users/lynell-mac-mini/Documents/repos/ygo-cardlist/node_modules/rescript/darwin/bsc.exe -as-ppx '
+S /Users/lynell-mac-mini/Documents/repos/ygo-cardlist/node_modules/rescript/lib/ocaml
+B /Users/lynell-mac-mini/Documents/repos/ygo-cardlist/node_modules/rescript/lib/ocaml
 FLG -w +a-4-9-20-40-41-42-50-61-102
-S /workspace/ygo-cardlist/node_modules/@ryyppy/rescript-promise/lib/ocaml
-B /workspace/ygo-cardlist/node_modules/@ryyppy/rescript-promise/lib/ocaml
-S /workspace/ygo-cardlist/node_modules/@glennsl/bs-json/lib/ocaml
-B /workspace/ygo-cardlist/node_modules/@glennsl/bs-json/lib/ocaml
+S /Users/lynell-mac-mini/Documents/repos/ygo-cardlist/node_modules/@ryyppy/rescript-promise/lib/ocaml
+B /Users/lynell-mac-mini/Documents/repos/ygo-cardlist/node_modules/@ryyppy/rescript-promise/lib/ocaml
+S /Users/lynell-mac-mini/Documents/repos/ygo-cardlist/node_modules/@glennsl/bs-json/lib/ocaml
+B /Users/lynell-mac-mini/Documents/repos/ygo-cardlist/node_modules/@glennsl/bs-json/lib/ocaml
 S src
 B lib/bs/src
 ####BSB GENERATED: NO EDIT}

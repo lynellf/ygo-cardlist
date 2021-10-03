@@ -1,9 +1,8 @@
 open Promise
 
 let getDirectoriesFromUser = () => {
-  Prompt.ask("Provide a directory path. Press Ctrl + C to exit. \n")
-    ->then(msg => {
-      resolve(msg)
+  Prompt.ask("Provide a directory path. Press Ctrl + C to exit. \n")->then(msg => {
+    resolve(msg)
   })
 }
 
@@ -16,9 +15,10 @@ let fromConfig = () => {
 }
 
 let fromInput = () => {
-  let action = getDirectoriesFromUser()->then((paths) => {
+  let action = getDirectoriesFromUser()->then(paths => {
     CardParser.parseCards(paths)
     CardFormatter.formatCards()
+    resolve()
   })
 
   Js.log(action)
