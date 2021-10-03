@@ -2,7 +2,7 @@
   "name": "ygo-cardlist",
   "version": "1.0.0",
   "description": "List of converted cdb files for consumption in other apps",
-  "main": "main.js",
+  "main": "./cards/cards.js",
   "scripts": {
     "build": "npm install && rescript && node app",
     "clean": "rescript clean -with-deps",
